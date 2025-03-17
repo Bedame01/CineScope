@@ -1,0 +1,103 @@
+@font-face {
+    font-family: 'Pp Mori';
+    src: url(/src/Fonts/PPMori-Regular.otf) format(ttf);
+    src: url(/src/Fonts/PPMori-Regular.otf) format(woff);
+    src: url(/src/Fonts/PPMori-Regular.otf) format(woff2);
+}
+
+@font-face {
+    font-family: 'Array';
+    src: url(/src/Fonts/Array-Semibold.ttf) format(woff);
+}
+
+:root{
+    --light: #fff;
+    --text-light: #d5d5d5;
+    --dark: #212426;
+    --primaryColor: #ff9fa7;
+    --secondaryColor: #e0f11f;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, div, input, button, label, .subject span{
+    color: var(--text-light) !important;
+}
+
+body{
+    background: var(--dark);
+}
+
+/* MAIN SECTION */
+main{
+    margin-top: 20px !important;
+}
+
+.infoUI-update{
+    display: flex;
+}
+
+.title-heading{
+    /* font-size: 20px !important; */
+    text-transform: uppercase !important;
+    font-weight: 800 !important;
+    color: var(--primaryColor) !important;
+}
+
+.poster-container{
+    position: relative;
+    width: 100%;
+    max-width: 450px;
+    height: 520px;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1.5px solid #575757;
+    box-shadow: 0 0 15px rgba(60, 60, 60, 0.2);
+    transition: all 0.5s;
+}
+
+div.info-wrapper, div.downloadWrapper{
+    width: 100% !important;
+    max-width: 420px !important;
+}
+
+div.info-wrapper:nth-child(2){
+    max-width: 650px !important;
+}
+
+.card{
+    background-color: #2b2b2b;
+    border: 1.5px solid #575757;
+}
+
+h5.card-title{
+    color: #e0f11f !important;
+    text-decoration: white dotted !important;
+}
+
+div.downloadWrapper{
+    background: transparent;
+    border: 1.5px solid #575757;
+}
+div.downloadWrapper .btn{
+    background-color: var(--secondaryColor);
+    &:hover{
+        background-color: var(--primaryColor);
+        color: var(--dark) !important;
+    }
+}
+
+div.card-body .subject{
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    color: var(--secondaryColor) !important;
+}
+
+/* TABLET SCREEN MEDIA QUERY */
+@media screen and (min-width: 700px) {
+    div.movie-info-wrapper {
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        align-items: normal !important;
+        gap: 40px !important;
+    }
+}
