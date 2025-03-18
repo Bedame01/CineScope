@@ -6,6 +6,7 @@ import '/node_modules/bootstrap/dist/js/bootstrap.js';
 import MovieCard from "./components/MovieCard";
 import MovieInfo from "./components/moreInfo/MovieInfo";
 import './components/Loading.css';
+import Loading from "./components/Loading";
 
 function App() {
   const API_URL = "http://www.omdbapi.com/?apikey=d1c4aa8a";
@@ -20,10 +21,9 @@ function App() {
     });
   };
 
-
   useEffect(() => {
-    fetchData("");
     setLoading(true)
+    fetchData("");
   }, []);
 
   const [movie, setMovies] = useState([]);
@@ -47,19 +47,19 @@ function App() {
 
   if (loading) {
     return (
-      <div class="loader">
-        <div class="loader-inner">
-          <div class="loader-block"></div>
-          <div class="loader-block"></div>
-          <div class="loader-block"></div>
-          <div class="loader-block"></div>
-          <div class="loader-block"></div>
-          <div class="loader-block"></div>
-          <div class="loader-block"></div>
-          <div class="loader-block"></div>
-        </div>
-      </div>
-
+      // <div class="loader">
+      //   <div class="loader-inner">
+      //     <div class="loader-block"></div>
+      //     <div class="loader-block"></div>
+      //     <div class="loader-block"></div>
+      //     <div class="loader-block"></div>
+      //     <div class="loader-block"></div>
+      //     <div class="loader-block"></div>
+      //     <div class="loader-block"></div>
+      //     <div class="loader-block"></div>
+      //   </div>
+      // </div>
+      <Loading />
     );    
   }
 
@@ -105,4 +105,3 @@ function App() {
 }
 
 export default App;
-// d8ee77f0-fd2c-11ef-8a1a-890f66758928
