@@ -9,7 +9,7 @@ import './components/Loading.css';
 import Loading from "./components/Loading";
 
 function App() {
-  const API_URL = "http://www.omdbapi.com/?apikey=d1c4aa8a";
+  const API_URL = "https://www.omdbapi.com/?apikey=d1c4aa8a";
   const fetchData = async (title) => {
     const response = await fetch(`${API_URL}&s=${title}`);
     const data = await response.json();
