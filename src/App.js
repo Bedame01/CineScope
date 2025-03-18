@@ -13,7 +13,7 @@ function App() {
     const response = await fetch(`${API_URL}&s=${title}`);
     const data = await response.json();
     setMovies(data.Search);
-    // setLoading(false);
+    setLoading(false);
 
     document.querySelectorAll('.infoUI-update').forEach((info) => {
       info.classList.add('d-none');
@@ -23,13 +23,13 @@ function App() {
 
   useEffect(() => {
     fetchData("");
-    // setLoading(true)
+    setLoading(true)
   }, []);
 
   const [movie, setMovies] = useState([]);
   const [movieMoreInfo, setMovieMoreInfo] = useState([]);
   const [search, setSearch] = useState('');
-  // const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
 
   const handleCardClick = (imdbID) => {
     console.log('Clicked IMDb ID:', imdbID);
@@ -40,28 +40,28 @@ function App() {
       const fullData = await response2.json();
       setMovieMoreInfo(fullData);
       console.log(fullData);
-      // setLoading(false);
+      setLoading(false);
     };
     console.log(fetchFullData(imdbID));
   };
 
-  // if (loading) {
-  //   return (
-  //     <div class="loader">
-  //       <div class="loader-inner">
-  //         <div class="loader-block"></div>
-  //         <div class="loader-block"></div>
-  //         <div class="loader-block"></div>
-  //         <div class="loader-block"></div>
-  //         <div class="loader-block"></div>
-  //         <div class="loader-block"></div>
-  //         <div class="loader-block"></div>
-  //         <div class="loader-block"></div>
-  //       </div>
-  //     </div>
+  if (loading) {
+    return (
+      <div class="loader">
+        <div class="loader-inner">
+          <div class="loader-block"></div>
+          <div class="loader-block"></div>
+          <div class="loader-block"></div>
+          <div class="loader-block"></div>
+          <div class="loader-block"></div>
+          <div class="loader-block"></div>
+          <div class="loader-block"></div>
+          <div class="loader-block"></div>
+        </div>
+      </div>
 
-  //   );    
-  // }
+    );    
+  }
 
   return (
     <div className="app d-flex justify-content-center align-items-center flex-column p-3" id="home">
