@@ -14,7 +14,6 @@ function App() {
     const response = await fetch(`${API_URL}&s=${title}`);
     const data = await response.json();
     setMovies(data.Search);
-    setLoading(false);
 
     document.querySelectorAll('.infoUI-update').forEach((info) => {
       info.classList.add('d-none');
@@ -22,7 +21,10 @@ function App() {
   };
 
   useEffect(() => {
-    setLoading(true)
+    setTimeout(() => {
+      setLoading(false);
+    }
+    , 2000);
     fetchData("");
   }, []);
 
@@ -40,7 +42,6 @@ function App() {
       const fullData = await response2.json();
       setMovieMoreInfo(fullData);
       console.log(fullData);
-      setLoading(false);
     };
     console.log(fetchFullData(imdbID));
   };
