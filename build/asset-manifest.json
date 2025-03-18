@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.8bcf04d8.css",
+    "main.js": "/static/js/main.36a6e099.js",
+    "static/js/453.69a2be93.chunk.js": "/static/js/453.69a2be93.chunk.js",
+    "static/media/Array-Semibold.ttf": "/static/media/Array-Semibold.078d6f20558a57d38f5d.ttf",
+    "static/media/PPMori-Regular.otf": "/static/media/PPMori-Regular.e647e964441593fd7fdf.otf",
+    "index.html": "/index.html",
+    "static/media/search.svg": "/static/media/search.6c72a6eed1dcae0282b3ecaf47c301a7.svg",
+    "main.8bcf04d8.css.map": "/static/css/main.8bcf04d8.css.map",
+    "main.36a6e099.js.map": "/static/js/main.36a6e099.js.map",
+    "453.69a2be93.chunk.js.map": "/static/js/453.69a2be93.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8bcf04d8.css",
+    "static/js/main.36a6e099.js"
+  ]
+}
